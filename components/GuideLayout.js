@@ -15,6 +15,7 @@ export default function GuideLayout({ guide }) {
           {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {section.list && <ul>{section.list.map((item) => <li key={item}>{item}</li>)}</ul>}
           {section.example && <div className="guide-example"><strong>Practical example</strong><p>{section.example}</p></div>}
+          {section.links?.map((link) => <p className="guide-related" key={link.href}>Related: <Link href={link.href}>{link.label}</Link></p>)}
         </section>)}
         <section className="guide-cta">
           <h2>{guide.cta.heading}</h2>
