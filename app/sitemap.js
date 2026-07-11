@@ -1,0 +1,2 @@
+import { guideList } from './guides/guideData';
+export default function sitemap(){const base='https://creatorplantools.com';const pages=['','/guides','/about','/contact','/privacy','/terms','/tools/youtube-script-length-calculator','/tools/voiceover-duration-calculator','/tools/tiktok-video-planner'];return [...pages.map((path)=>({url:`${base}${path}`,changeFrequency:path===''?'weekly':'monthly',priority:path===''?1:path==='/guides'?.8:.6})),...guideList.map((guide)=>({url:`${base}/guides/${guide.slug}`,changeFrequency:'monthly',priority:.8}))]}
