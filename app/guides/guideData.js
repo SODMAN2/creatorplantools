@@ -193,7 +193,8 @@ export const guides = {
 };
 
 import { batchTwoGuides } from './batchTwoData';
+import { batchThreeGuides } from './batchThreeData';
 
-Object.assign(guides, batchTwoGuides);
+Object.assign(guides, batchTwoGuides, batchThreeGuides);
 
 export const guideList = Object.values(guides);
