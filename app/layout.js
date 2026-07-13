@@ -6,6 +6,7 @@ import './watch-time-calculator.css';
 import './structure.css';
 import './description-checker.css';
 import './hashtag-counter.css';
+import './caption-counter.css';
 import Link from 'next/link';
 
 export const metadata = {

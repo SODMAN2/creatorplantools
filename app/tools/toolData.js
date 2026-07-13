@@ -8,4 +8,5 @@ export const toolList = [
   { icon: 'T', name: 'YouTube Title Length Checker', description: 'Check a YouTube title’s characters, words, and readability with a simple length status.', href: '/tools/youtube-title-length-checker' },
   { icon: 'D', name: 'YouTube Description Length Checker', description: 'Check a YouTube description’s characters, words, lines, opening preview, and structure.', href: '/tools/youtube-description-length-checker' },
   { icon: '#', name: 'Hashtag Counter', description: 'Count, clean, and review hashtags for YouTube, TikTok, Instagram, Reels, and Shorts.', href: '/tools/hashtag-counter' },
+  { icon: 'C', name: 'Caption Character Counter', description: 'Count characters, words, lines, and estimated reading time for social media captions.', href: '/tools/caption-character-counter' },
 ];
