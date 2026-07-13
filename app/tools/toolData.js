@@ -1,4 +1,5 @@
 export const toolList = [
+  { icon: 'H', name: 'Video Hook Checker', description: 'Check a video opening line\'s words, characters, estimated speaking time, and practical hook length.', href: '/tools/video-hook-checker' },
   { icon: '▶', name: 'YouTube Script Length Calculator', description: 'Estimate the word count you need for a target video length and speaking pace.', href: '/tools/youtube-script-length-calculator' },
   { icon: '◷', name: 'Voiceover Duration Calculator', description: 'Turn a script word count into a realistic voiceover duration at different narration speeds.', href: '/tools/voiceover-duration-calculator' },
   { icon: '♪', name: 'TikTok Video Planner', description: 'Plan a clear hook, content beats, call to action, and timing for a short-form video.', href: '/tools/tiktok-video-planner' },
