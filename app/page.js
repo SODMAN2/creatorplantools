@@ -2,6 +2,12 @@ import Link from 'next/link';
 
 const popularTools = [
   {
+    icon: 'CAL',
+    name: 'Content Calendar Planner',
+    description: 'Organise weekly or monthly content ideas by platform, date, format, and status.',
+    href: '/tools/content-calendar-planner',
+  },
+  {
     icon: 'YT',
     name: 'YouTube Script Length Calculator',
     description: 'Estimate a practical word-count range from your target video length and speaking pace.',

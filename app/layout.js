@@ -7,6 +7,7 @@ import './structure.css';
 import './description-checker.css';
 import './hashtag-counter.css';
 import './caption-counter.css';
+import './content-calendar.css';
 import Link from 'next/link';
 
 export const metadata = {

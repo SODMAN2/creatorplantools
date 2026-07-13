@@ -1,4 +1,5 @@
 const tools = {
+  calendar: ['Content Calendar Planner', '/tools/content-calendar-planner', 'Organise content ideas by platform, date, format, and status.'],
   script: ['YouTube Script Length Calculator', '/tools/youtube-script-length-calculator', 'Estimate a word-count target from runtime and speaking pace.'],
   title: ['YouTube Title Length Checker', '/tools/youtube-title-length-checker', 'Review a title\'s length, word count, and readability.'],
   description: ['YouTube Description Length Checker', '/tools/youtube-description-length-checker', 'Check the length, opening, and structure of a description.'],
@@ -31,6 +32,7 @@ const guides = {
 };
 
 const toolMap = {
+  'Content Calendar Planner': [['planner', 'hook'], ['calendar', 'batch', 'repurpose']],
   'YouTube Script Length Calculator': [['voiceover', 'hook'], ['script', 'checklist']],
   'YouTube Title Length Checker': [['description', 'script'], ['checklist', 'hooks']],
   'YouTube Description Length Checker': [['title', 'script'], ['descriptions', 'checklist']],

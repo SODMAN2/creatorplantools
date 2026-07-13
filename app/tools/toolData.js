@@ -30,12 +30,13 @@ export const toolSections = [
   {
     id: 'creator-planning-tools',
     title: 'Creator Planning Tools',
-    description: 'Shape a stronger opening and turn a finished draft into a more realistic recording and production plan.',
+    description: 'Organise content ideas, shape stronger openings, and turn finished drafts into realistic recording and production plans.',
     guideLinks: [
-      { label: 'How to write a video hook', href: '/guides/how-to-write-a-video-hook' },
-      { label: 'Voiceover pacing for videos', href: '/guides/voiceover-pacing-for-videos' },
+      { label: 'Content calendar for creators', href: '/guides/content-calendar-for-creators' },
+      { label: 'How to batch create content', href: '/guides/how-to-batch-create-content' },
     ],
     tools: [
+      { icon: 'CAL', name: 'Content Calendar Planner', description: 'Organise weekly or monthly content ideas by platform, format, date, and production status.', href: '/tools/content-calendar-planner' },
       { icon: 'H', name: 'Video Hook Checker', description: 'Check a video opening line’s words, characters, estimated speaking time, and practical hook length.', href: '/tools/video-hook-checker' },
       { icon: 'VO', name: 'Voiceover Duration Calculator', description: 'Turn a script word count into a realistic voiceover duration at different narration speeds.', href: '/tools/voiceover-duration-calculator' },
     ],
