@@ -4,6 +4,7 @@ import './revenue-calculator.css';
 import './engagement-calculator.css';
 import './watch-time-calculator.css';
 import './structure.css';
+import './description-checker.css';
 import Link from 'next/link';
 
 export const metadata = {

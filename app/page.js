@@ -17,7 +17,7 @@ export default function Home() {
     </div></div>
     <section id="tools"><div className="wrap">
       <div className="section-head"><div className="eyebrow">Creator tools</div><h2>Useful answers in a few clicks</h2><p>Simple calculators and planners designed around everyday creator workflows.</p></div>
-      <div className="grid">{toolList.slice(0, 6).map((tool) => <Link className="card" href={tool.href} key={tool.href}><span className="icon" aria-hidden="true">{tool.icon}</span><h3>{tool.name}</h3><p className="muted">{tool.description}</p><b>Use tool →</b></Link>)}</div>
+      <div className="grid">{toolList.map((tool) => <Link className="card" href={tool.href} key={tool.href}><span className="icon" aria-hidden="true">{tool.icon}</span><h3>{tool.name}</h3><p className="muted">{tool.description}</p><b>Use tool →</b></Link>)}</div>
       <div className="section-action"><Link className="button secondary" href="/tools">View all creator tools</Link></div>
     </div></section>
     <section className="soft" id="guides"><div className="wrap">

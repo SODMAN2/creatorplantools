@@ -6,4 +6,5 @@ export const toolList = [
   { icon: '%', name: 'Engagement Rate Calculator', description: 'Calculate engagement by views or followers for videos and social media posts.', href: '/tools/engagement-rate-calculator' },
   { icon: '◴', name: 'Watch Time Calculator', description: 'Estimate total watch time in minutes, hours, and days from views and average view duration.', href: '/tools/watch-time-calculator' },
   { icon: 'T', name: 'YouTube Title Length Checker', description: 'Check a YouTube title’s characters, words, and readability with a simple length status.', href: '/tools/youtube-title-length-checker' },
+  { icon: 'D', name: 'YouTube Description Length Checker', description: 'Check a YouTube description’s characters, words, lines, opening preview, and structure.', href: '/tools/youtube-description-length-checker' },
 ];
