@@ -30,3 +30,11 @@
 .home-disclaimer strong{color:var(--ink)}
 .home-disclaimer p{display:inline;margin:0 0 0 5px}
 @media(max-width:760px){.home-hero{padding-bottom:52px}.hero-benefits{gap:8px 18px}.why-layout{grid-template-columns:1fr;gap:28px}.why-intro{position:static}.why-grid{grid-template-columns:1fr}.home-explore{padding-bottom:38px}.home-explore-inner{align-items:flex-start;flex-direction:column;padding:28px 24px}.home-explore .buttons{width:100%}.home-explore .button{width:100%;text-align:center}.home-disclaimer{margin-bottom:52px}.home-disclaimer p{display:block;margin:6px 0 0}}
+
+/* Creator FAQ */
+.faq-list{margin-top:42px;border-bottom:1px solid var(--line)}
+.faq-list .faq{padding:24px 0}
+.faq-list .faq h2{margin:0 0 8px;font-size:21px;line-height:1.35}
+.faq-list .faq p{margin:0;color:var(--muted)}
+.faq-more{padding:42px 0 0}
+.faq-more h2{margin-top:0}

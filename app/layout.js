@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
             <div>
               <strong>Information</strong>
               <Link href="/about">About</Link>
+              <Link href="/faq">FAQ</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/editorial-policy">Editorial Policy</Link>
               <Link href="/privacy">Privacy Policy</Link>
