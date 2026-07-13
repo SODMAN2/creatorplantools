@@ -1,0 +1,89 @@
+.footer-about p {
+  max-width: 430px;
+  margin: 4px 0;
+  color: #b9c5d6;
+}
+
+.footer-grid a:not(.brand):hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-card h2 {
+  margin: 10px 0 8px;
+  font-size: 21px;
+}
+
+.tool-card p {
+  flex: 1;
+}
+
+.index-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 48px;
+  padding: 28px;
+  background: var(--light);
+  border-radius: 14px;
+}
+
+.index-cta h2 {
+  margin: 0 0 4px;
+  font-size: 25px;
+}
+
+.index-cta p {
+  max-width: 700px;
+  margin: 0;
+}
+
+.index-cta .button {
+  flex: none;
+}
+
+.back-link {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.back-link a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .nav nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 9px;
+    margin-top: 9px;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav nav a,
+  .nav nav a:last-child {
+    display: block !important;
+  }
+
+  .index-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
