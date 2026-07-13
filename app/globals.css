@@ -2,6 +2,11 @@
 .title-counts.hook-counts{grid-template-columns:repeat(3,1fr)}
 .hook-input{min-height:190px;resize:vertical}
 .tool-note{margin:14px 0 0;color:var(--muted);font-size:14px}
+.related-content{margin-top:46px;padding:34px 0 10px!important;border-top:1px solid var(--line)}
+.related-heading{margin-bottom:24px}.related-heading h2,.content .related-heading h2,.guide-content .related-heading h2{margin:6px 0 4px;font-size:28px}.related-heading p{margin:0;color:var(--muted)}
+.related-group{margin-top:24px}.related-group h3{margin:0 0 11px;font-size:17px}.related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.related-card{display:block;padding:18px;border:1px solid var(--line);border-radius:12px;background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s}.related-card:hover{transform:translateY(-2px);border-color:#b7c9ef;box-shadow:0 8px 24px #1f355212}.related-card span{color:#17325c;font-weight:800;line-height:1.35}.related-card p,.guide-content .related-card p{margin:5px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+@media(max-width:600px){.related-content{margin-top:36px;padding-top:28px!important}.related-grid{grid-template-columns:1fr}.related-card{padding:16px}}
 @media(max-width:760px){.title-counts.hook-counts{grid-template-columns:1fr}}
 
 /* Homepage */

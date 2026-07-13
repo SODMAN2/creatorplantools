@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import RelatedContent from './RelatedContent';
+import { getRelatedForGuide } from './relatedContentData';
 
 export default function GuideLayout({ guide }) {
   return <article className="guide-page">
@@ -26,6 +28,7 @@ export default function GuideLayout({ guide }) {
           <h2>Frequently asked questions</h2>
           {guide.faqs.map(([question, answer]) => <div className="faq" key={question}><h3>{question}</h3><p>{answer}</p></div>)}
         </section>
+        <RelatedContent related={getRelatedForGuide(guide.slug)} />
         <div className="back-link"><Link href="/guides">← Browse all creator guides</Link></div>
       </div>
     </div>
