@@ -59,6 +59,27 @@
   font-weight: 700;
 }
 
+.page-intro {
+  font-size: 19px;
+  color: var(--muted);
+}
+
+.contact-card {
+  margin-top: 36px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--light);
+}
+
+.contact-card h2 {
+  margin-top: 0;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 760px) {
   .nav {
     height: auto;
@@ -85,5 +106,9 @@
   .index-cta {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact-card {
+    padding: 22px;
   }
 }

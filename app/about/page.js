@@ -1,1 +1,40 @@
-export const metadata={title:'About',description:'Learn about CreatorPlanTools and our practical resources for content creators.'};export default function Page(){return <div className="page"><div className="wrap content"><div className="eyebrow">About us</div><h1>Practical planning for modern creators</h1><p>CreatorPlanTools provides free, straightforward tools and guides for YouTubers, TikTokers, Instagram creators, and faceless content publishers.</p><p>Our goal is to make everyday planning tasks easier: estimating script length, checking voiceover timing, and shaping content into a clear structure. We focus on useful information and transparent calculations. Our tools provide estimates, so creators should always test and adapt the results to their own voice and workflow.</p><h2>Our editorial approach</h2><p>We aim to publish clear, original, and practical resources. We do not make promises about views, followers, income, or platform performance.</p></div></div>}
+export const metadata = {
+  title: { absolute: 'About CreatorPlanTools | Free Planning Tools for Creators' },
+  description: 'Learn how CreatorPlanTools provides free browser-based planning tools and practical guides for YouTube, TikTok, Instagram, and faceless creators.',
+  alternates: { canonical: '/about' },
+};
+
+export default function AboutPage() {
+  return (
+    <div className="page">
+      <div className="wrap content">
+        <div className="eyebrow">About</div>
+        <h1>Practical planning tools for modern creators</h1>
+        <p className="page-intro">
+          CreatorPlanTools is a collection of free, browser-based planning tools and
+          practical guides for people who create content online.
+        </p>
+        <h2>Who the site is for</h2>
+        <p>
+          The resources are designed for YouTube, TikTok, and Instagram creators,
+          including faceless content creators and independent publishers. Whether you
+          are planning your first video or refining an established process, the aim is
+          to make everyday creator decisions easier to understand.
+        </p>
+        <h2>What you can plan</h2>
+        <p>
+          CreatorPlanTools covers common parts of the creator workflow, including
+          script planning, voiceover timing, video structure, engagement, and watch
+          time. The tools provide quick estimates, while the guides explain the ideas
+          behind the numbers so you can adapt them to your format, audience, and style.
+        </p>
+        <h2>Our approach</h2>
+        <p>
+          We aim to publish clear, original, and useful resources without unnecessary
+          complexity. Tool results are estimates, not promises. CreatorPlanTools does
+          not guarantee views, followers, income, or performance on any platform.
+        </p>
+      </div>
+    </div>
+  );
+}

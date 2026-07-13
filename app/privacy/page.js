@@ -1,1 +1,49 @@
-export const metadata={title:'Privacy Policy',description:'Read the CreatorPlanTools privacy policy.'};export default function Page(){return <div className="page"><div className="wrap content"><h1>Privacy Policy</h1><p className="muted">Last updated: July 10, 2026</p><p>CreatorPlanTools respects your privacy. The calculators currently process the information you enter within your browser and do not require an account.</p><h2>Information we may collect</h2><p>Our hosting and analytics providers may automatically process standard technical information such as IP address, browser type, device type, referring page, and pages visited. If you contact us, we receive the information you include in your message.</p><h2>Cookies and advertising</h2><p>We may use cookies or similar technologies for essential operation, analytics, and, if advertising is introduced, ad delivery and measurement. Third-party vendors, including Google, may use cookies to serve ads based on prior visits. Where required, we will request consent and provide relevant controls.</p><h2>How information is used</h2><p>We may use information to operate and improve the website, understand aggregate usage, respond to messages, prevent misuse, and meet legal obligations. We do not sell personal information.</p><h2>Data retention and rights</h2><p>We keep information only as long as reasonably necessary. Depending on your location, you may have rights to access, correct, delete, or restrict use of personal information.</p><h2>Contact</h2><p>For privacy questions, email <a href="mailto:hello@creatorplantools.com">hello@creatorplantools.com</a>.</p></div></div>}
+export const metadata = {
+  title: { absolute: 'Privacy Policy | CreatorPlanTools' },
+  description: 'Read the CreatorPlanTools privacy policy, including how browser-based tools, cookies, third-party services, and contact messages are handled.',
+  alternates: { canonical: '/privacy' },
+};
+
+export default function PrivacyPage() {
+  return (
+    <div className="page">
+      <div className="wrap content">
+        <div className="eyebrow">Privacy</div>
+        <h1>Privacy Policy</h1>
+        <p className="muted">Last updated: July 13, 2026</p>
+        <p className="page-intro">
+          CreatorPlanTools does not require you to create an account or log in. Where
+          possible, the tools run directly in your browser.
+        </p>
+        <h2>Information we collect</h2>
+        <p>
+          Information entered into the current calculators and planners is processed
+          in your browser. CreatorPlanTools does not receive or store those tool inputs.
+          If you email us, we receive the email address and information you choose to
+          include in your message so that we can respond.
+        </p>
+        <p>
+          Like most websites, our hosting provider may process standard technical
+          information needed to deliver and protect the site, such as an IP address,
+          browser type, requested page, and request time.
+        </p>
+        <h2>Cookies</h2>
+        <p>
+          CreatorPlanTools does not currently require account or tool-calculation
+          cookies. If analytics, advertising, or other cookie-based features are added,
+          this policy will be updated and consent controls will be provided where
+          required.
+        </p>
+        <h2>Third-party services</h2>
+        <p>
+          We use third-party hosting infrastructure to make the website available.
+          Those providers may process limited technical data on our behalf. Links to
+          other websites or services are governed by their own privacy policies.
+          CreatorPlanTools does not currently display advertising.
+        </p>
+        <h2>Contact</h2>
+        <p>For questions about this policy, email <a className="content-link" href="mailto:hello@creatorplantools.com">hello@creatorplantools.com</a>.</p>
+      </div>
+    </div>
+  );
+}
