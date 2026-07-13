@@ -36,6 +36,25 @@
 .home-disclaimer p{display:inline;margin:0 0 0 5px}
 @media(max-width:760px){.home-hero{padding-bottom:52px}.hero-benefits{gap:8px 18px}.why-layout{grid-template-columns:1fr;gap:28px}.why-intro{position:static}.why-grid{grid-template-columns:1fr}.home-explore{padding-bottom:38px}.home-explore-inner{align-items:flex-start;flex-direction:column;padding:28px 24px}.home-explore .buttons{width:100%}.home-explore .button{width:100%;text-align:center}.home-disclaimer{margin-bottom:52px}.home-disclaimer p{display:block;margin:6px 0 0}}
 
+/* Not found */
+.not-found-page{min-height:calc(100vh - 414px);padding:88px 0;background:linear-gradient(145deg,#f6f9ff,#fff 58%)}
+.not-found-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:72px;align-items:center}
+.not-found-intro{max-width:650px}
+.not-found-code{margin-bottom:12px;color:#dfe8ff;font-size:clamp(76px,12vw,128px);font-weight:900;line-height:.8;letter-spacing:-.07em}
+.not-found-intro h1{margin:9px 0 18px;font-size:clamp(38px,5vw,56px);line-height:1.08;letter-spacing:-1.8px}
+.not-found-intro p{max-width:620px;margin:0 0 12px;color:var(--muted);font-size:18px}
+.not-found-intro .not-found-encouragement{color:#36445a;font-weight:600}
+.not-found-intro .button{margin-top:18px}
+.not-found-links{display:grid;gap:12px}
+.not-found-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;border:1px solid var(--line);border-radius:13px;background:#fff;box-shadow:0 8px 28px #1f35520a;transition:border-color .2s,box-shadow .2s,transform .2s}
+.not-found-link:hover{transform:translateY(-2px);border-color:#b7c9ef;box-shadow:0 10px 30px #1f355214}
+.not-found-link:focus-visible{outline:3px solid #a9c2ff;outline-offset:3px}
+.not-found-link strong,.not-found-link small{display:block}
+.not-found-link strong{font-size:18px;color:#17325c}
+.not-found-link small{margin-top:3px;color:var(--muted);font-size:14px;line-height:1.45}
+.not-found-arrow{flex:0 0 auto;color:var(--blue);font-size:23px;font-weight:800}
+@media(max-width:760px){.not-found-page{min-height:auto;padding:58px 0}.not-found-wrap{grid-template-columns:1fr;gap:42px}.not-found-code{font-size:76px}.not-found-intro h1{font-size:38px}.not-found-intro p{font-size:16px}.not-found-intro .button{width:100%;text-align:center}.not-found-link{padding:18px}}
+
 /* Creator FAQ */
 .faq-list{margin-top:42px;border-bottom:1px solid var(--line)}
 .faq-list .faq{padding:24px 0}
