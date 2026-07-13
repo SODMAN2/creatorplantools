@@ -5,6 +5,8 @@ import { getRelatedForGuide } from './relatedContentData';
 import JsonLd from './JsonLd';
 
 const BASE_URL = 'https://creatorplantools.com';
+const LAST_UPDATED = 'July 13, 2026';
+const LAST_UPDATED_ISO = '2026-07-13';
 
 export default function GuideLayout({ guide }) {
   const url = `${BASE_URL}/guides/${guide.slug}`;
@@ -19,6 +21,7 @@ export default function GuideLayout({ guide }) {
         url,
         mainEntityOfPage: url,
         articleSection: 'Creator guides',
+        dateModified: LAST_UPDATED_ISO,
         publisher: { '@id': `${BASE_URL}/#organization` },
       },
       {
@@ -41,6 +44,7 @@ export default function GuideLayout({ guide }) {
         <div className="eyebrow">Creator guide</div>
         <h1>{guide.title}</h1>
         <p>{guide.intro}</p>
+        <p className="guide-updated"><time dateTime={LAST_UPDATED_ISO}>Last updated: {LAST_UPDATED}</time></p>
       </header>
       <div className="guide-content">
         {guide.sections.map((section) => <section key={section.heading}>
@@ -59,6 +63,10 @@ export default function GuideLayout({ guide }) {
           <h2>Frequently asked questions</h2>
           {guide.faqs.map(([question, answer]) => <div className="faq" key={question}><h3>{question}</h3><p>{answer}</p></div>)}
         </section>
+        <aside className="guide-page-disclaimer" aria-label="Guide results disclaimer">
+          <strong>General planning guidance only.</strong>
+          <p>This guide does not guarantee views, reach, rankings, revenue, engagement, monetisation, or growth. Results vary by audience, content, execution, platform changes, and other factors.</p>
+        </aside>
         <RelatedContent related={getRelatedForGuide(guide.slug)} />
         <div className="back-link"><Link href="/guides">← Browse all creator guides</Link></div>
       </div>

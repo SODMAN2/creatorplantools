@@ -17,7 +17,7 @@ export default function EditorialPolicyPage() {
         <Breadcrumbs items={[{ label: 'Editorial Policy', href: '/editorial-policy' }]} />
         <div className="eyebrow">Editorial Policy</div>
         <h1>Editorial Policy</h1>
-        <p className="muted">Last updated: July 13, 2026</p>
+        <p className="muted page-updated"><time dateTime="2026-07-13">Last updated: July 13, 2026</time></p>
         <p className="page-intro">
           This policy explains how CreatorPlanTools creates, reviews, and updates its
           creator tools and guides.

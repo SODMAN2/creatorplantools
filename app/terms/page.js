@@ -15,7 +15,7 @@ export default function TermsPage() {
         <Breadcrumbs items={[{ label: 'Terms of Use', href: '/terms' }]} />
         <div className="eyebrow">Terms</div>
         <h1>Terms of Use</h1>
-        <p className="muted">Last updated: July 13, 2026</p>
+        <p className="muted page-updated"><time dateTime="2026-07-13">Last updated: July 13, 2026</time></p>
         <p className="page-intro">
           By using CreatorPlanTools, you agree to these terms. If you do not agree,
           please do not use the website.

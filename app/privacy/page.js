@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <Breadcrumbs items={[{ label: 'Privacy Policy', href: '/privacy' }]} />
         <div className="eyebrow">Privacy</div>
         <h1>Privacy Policy</h1>
-        <p className="muted">Last updated: July 13, 2026</p>
+        <p className="muted page-updated"><time dateTime="2026-07-13">Last updated: July 13, 2026</time></p>
         <p className="page-intro">
           CreatorPlanTools does not require you to create an account or log in. Where
           possible, the tools run directly in your browser.

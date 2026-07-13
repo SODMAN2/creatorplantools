@@ -41,7 +41,7 @@ export default function ToolLayout({ eyebrow, title, intro, tool, explanation, s
     <div className="page-head"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1><p className="muted">{intro}</p></div>
     <div className={`tool${wide ? ' tool-wide' : ''}`}>
       <div className="panel">{tool}</div>
-      <aside className="panel"><h2>What this tool does</h2><p className="muted">{explanation}</p><p><strong>Free to use.</strong> Your entries stay in your browser and are not saved.</p></aside>
+      <aside className="panel"><h2>What this tool does</h2><p className="muted">{explanation}</p><p><strong>Free to use.</strong> Your entries stay in your browser and are not saved.</p><div className="tool-page-disclaimer" role="note"><strong>Estimate and planning guidance only.</strong><p>Results are not predictions or guarantees. Review them alongside your own judgement, current platform information, and the needs of your content.</p></div></aside>
     </div>
     <div className="content">
       <h2>How to use this tool</h2>

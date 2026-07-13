@@ -173,6 +173,29 @@
   font-size: 14px;
 }
 
+.tool-page-disclaimer,
+.guide-page-disclaimer {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.tool-page-disclaimer p,
+.guide-page-disclaimer p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.page-updated {
+  margin: -10px 0 18px;
+  font-size: 14px;
+}
+
 .back-link {
   margin-top: 36px;
   padding-top: 22px;

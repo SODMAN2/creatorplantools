@@ -77,6 +77,7 @@ export default function FAQPage() {
         <Breadcrumbs items={[{ label: 'FAQ', href: '/faq' }]} />
         <div className="eyebrow">Help and information</div>
         <h1>Creator FAQ</h1>
+        <p className="muted page-updated"><time dateTime="2026-07-13">Last reviewed: July 13, 2026</time></p>
         <p className="page-intro">
           Straightforward answers about using CreatorPlanTools, understanding tool
           results, and finding the right resources for your creator workflow.

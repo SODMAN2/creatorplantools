@@ -15,6 +15,7 @@ export default function AboutPage() {
         <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
         <div className="eyebrow">About</div>
         <h1>Practical planning tools for modern creators</h1>
+        <p className="muted page-updated"><time dateTime="2026-07-13">Last reviewed: July 13, 2026</time></p>
         <p className="page-intro">
           CreatorPlanTools is a collection of free, browser-based planning tools and
           practical guides for people who create content online.
