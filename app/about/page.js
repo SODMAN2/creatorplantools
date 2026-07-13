@@ -1,13 +1,18 @@
-export const metadata = {
-  title: { absolute: 'About CreatorPlanTools | Free Planning Tools for Creators' },
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
+
+export const metadata = createPageMetadata({
+  title: 'About CreatorPlanTools | Free Planning Tools for Creators',
   description: 'Learn how CreatorPlanTools provides free browser-based planning tools and practical guides for YouTube, TikTok, Instagram, and faceless creators.',
-  alternates: { canonical: '/about' },
-};
+  path: '/about',
+  absoluteTitle: true,
+});
 
 export default function AboutPage() {
   return (
     <div className="page">
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
         <div className="eyebrow">About</div>
         <h1>Practical planning tools for modern creators</h1>
         <p className="page-intro">

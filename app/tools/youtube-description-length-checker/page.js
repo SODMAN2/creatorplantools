@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import ToolLayout from '@/components/ToolLayout';
 import YouTubeDescriptionLengthChecker from '@/components/YouTubeDescriptionLengthChecker';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'YouTube Description Length Checker',
   description: 'Check your YouTube description character count, word count, line count, opening preview, and structure with this free browser-based tool.',
-  alternates: { canonical: '/tools/youtube-description-length-checker' },
-};
+  path: '/tools/youtube-description-length-checker',
+});
 
 export default function Page() {
   return <ToolLayout

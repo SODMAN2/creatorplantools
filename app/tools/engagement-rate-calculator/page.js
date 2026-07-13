@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import ToolLayout from '@/components/ToolLayout';
 import EngagementRateCalculator from '@/components/EngagementRateCalculator';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata={
+export const metadata=createPageMetadata({
   title:'Engagement Rate Calculator for Creators',
   description:'Calculate engagement rate by views or followers for YouTube, TikTok, Instagram, Reels, Shorts, and other creator content.',
-  alternates:{canonical:'/tools/engagement-rate-calculator'}
-};
+  path:'/tools/engagement-rate-calculator'
+});
 
 const faqs=[
   ['What is engagement rate?','Engagement rate expresses selected interactions as a percentage of views or followers. This calculator adds likes, comments, shares, and saves, then divides that total by the basis you choose.'],

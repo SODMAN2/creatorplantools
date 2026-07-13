@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import ToolLayout from '@/components/ToolLayout';
 import YouTubeTitleLengthChecker from '@/components/YouTubeTitleLengthChecker';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'YouTube Title Length Checker',
   description: 'Check your YouTube title character count, word count, and length with a free browser-based tool, plus practical tips and title examples.',
-  alternates: { canonical: '/tools/youtube-title-length-checker' },
-};
+  path: '/tools/youtube-title-length-checker',
+});
 
 export default function Page() {
   return <ToolLayout

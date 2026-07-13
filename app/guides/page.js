@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { guideList } from './guideData';
 
 const guideCategories = [
@@ -137,6 +138,7 @@ export default function GuidesPage() {
 
   return <div className="page guides-index"><div className="wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }]} />
 
     <div className="page-head guides-head">
       <div className="eyebrow">Creator planning guides</div>

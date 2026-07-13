@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import ToolLayout from '@/components/ToolLayout';
 import VoiceCalculator from '@/components/VoiceCalculator';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Voiceover Duration Calculator',
   description: 'Estimate voiceover duration from your script word count and narration speed with this free calculator.',
-  alternates: { canonical: '/tools/voiceover-duration-calculator' },
-};
+  path: '/tools/voiceover-duration-calculator',
+});
 
 export default function Page() {
   return <ToolLayout eyebrow="Voiceover tool" title="Voiceover Duration Calculator" intro="Find out roughly how long your script will take to read aloud at slow, natural, or energetic pacing." tool={<VoiceCalculator />} explanation="This calculator divides your word count by the selected narration speed. The result helps with editing, shot planning, and content deadlines." steps={['Paste your script into a word processor to find its word count.', 'Enter that total and choose the closest narration pace.', 'Rehearse the script once and account for any long pauses, demonstrations, or music breaks.']} faqs={[["How long is a 1,000-word voiceover?", "At 140 words per minute, it is about 7 minutes and 9 seconds before longer pauses or edits."], ["What affects voiceover length?", "Speaking speed, emphasis, breathing, pronunciation, dramatic pauses, and breaks for visuals all change the final duration."], ["Is faster narration better for short-form content?", "Not always. Faster delivery can add energy, but clarity and comprehension should come first."]] }>

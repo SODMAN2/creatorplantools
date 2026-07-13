@@ -1,13 +1,18 @@
-export const metadata = {
-  title: { absolute: 'Terms of Use | CreatorPlanTools' },
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Terms of Use | CreatorPlanTools',
   description: 'Read the CreatorPlanTools terms of use for its free creator planning tools, calculators, estimates, and practical guides.',
-  alternates: { canonical: '/terms' },
-};
+  path: '/terms',
+  absoluteTitle: true,
+});
 
 export default function TermsPage() {
   return (
     <div className="page">
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'Terms of Use', href: '/terms' }]} />
         <div className="eyebrow">Terms</div>
         <h1>Terms of Use</h1>
         <p className="muted">Last updated: July 13, 2026</p>

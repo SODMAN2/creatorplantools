@@ -1,10 +1,13 @@
 import Link from 'next/link';
+import Breadcrumbs from './Breadcrumbs';
 import RelatedContent from './RelatedContent';
 import { getRelatedForTool } from './relatedContentData';
+import { toolList } from '@/app/tools/toolData';
 
 export default function ToolLayout({ eyebrow, title, intro, tool, explanation, steps, faqs, children, wide = false }) {
+  const toolPath = toolList.find((item) => item.name === title)?.href || '/tools';
   return <div className="page"><div className="wrap">
-    <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/tools">Tools</Link><span aria-hidden="true">/</span><span>{title}</span></nav>
+    <Breadcrumbs items={[{ label: 'Tools', href: '/tools' }, { label: title, href: toolPath }]} />
     <div className="page-head"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1><p className="muted">{intro}</p></div>
     <div className={`tool${wide ? ' tool-wide' : ''}`}>
       <div className="panel">{tool}</div>

@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata = {
-  title: { absolute: 'Creator FAQ | Free Creator Tools and Guides' },
+export const metadata = createPageMetadata({
+  title: 'Creator FAQ | Free Creator Tools and Guides',
   description:
     'Find answers about CreatorPlanTools, free creator tools, supported platforms, calculator estimates, accounts, updates, and feedback.',
-  alternates: { canonical: '/faq' },
-};
+  path: '/faq',
+  absoluteTitle: true,
+});
 
 const faqs = [
   {
@@ -73,6 +76,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'FAQ', href: '/faq' }]} />
         <div className="eyebrow">Help and information</div>
         <h1>Creator FAQ</h1>
         <p className="page-intro">

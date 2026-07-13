@@ -1,16 +1,20 @@
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata = {
-  title: { absolute: 'Editorial Policy | CreatorPlanTools' },
+export const metadata = createPageMetadata({
+  title: 'Editorial Policy | CreatorPlanTools',
   description:
     'Learn how CreatorPlanTools creates, reviews, and updates its creator planning tools and beginner-friendly guides.',
-  alternates: { canonical: '/editorial-policy' },
-};
+  path: '/editorial-policy',
+  absoluteTitle: true,
+});
 
 export default function EditorialPolicyPage() {
   return (
     <div className="page">
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'Editorial Policy', href: '/editorial-policy' }]} />
         <div className="eyebrow">Editorial Policy</div>
         <h1>Editorial Policy</h1>
         <p className="muted">Last updated: July 13, 2026</p>

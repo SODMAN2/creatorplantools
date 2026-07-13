@@ -1,3 +1,4 @@
 import GuideLayout from '@/components/GuideLayout'; import { guides } from '../guideData';
-export const metadata={title:guides.facelessChannel.title,description:guides.facelessChannel.description,alternates:{canonical:`/guides/${guides.facelessChannel.slug}`}};
+import { createPageMetadata } from '@/app/seo';
+export const metadata=createPageMetadata({title:guides.facelessChannel.title,description:guides.facelessChannel.description,path:`/guides/${guides.facelessChannel.slug}`});
 export default function Page(){return <GuideLayout guide={guides.facelessChannel}/>}

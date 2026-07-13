@@ -1,13 +1,18 @@
-export const metadata = {
-  title: { absolute: 'Contact CreatorPlanTools' },
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Contact CreatorPlanTools',
   description: 'Contact CreatorPlanTools with feedback, corrections, questions, or suggestions for free tools and practical creator guides.',
-  alternates: { canonical: '/contact' },
-};
+  path: '/contact',
+  absoluteTitle: true,
+});
 
 export default function ContactPage() {
   return (
     <div className="page">
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
         <div className="eyebrow">Contact</div>
         <h1>Contact CreatorPlanTools</h1>
         <p className="page-intro">

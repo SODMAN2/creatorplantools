@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Breadcrumbs from './Breadcrumbs';
 import RelatedContent from './RelatedContent';
 import { getRelatedForGuide } from './relatedContentData';
 
 export default function GuideLayout({ guide }) {
   return <article className="guide-page">
     <div className="wrap guide-wrap">
-      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/guides">Guides</Link><span aria-hidden="true">/</span><span>{guide.title}</span></nav>
+      <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }, { label: guide.title, href: `/guides/${guide.slug}` }]} />
       <header className="guide-head">
         <div className="eyebrow">Creator guide</div>
         <h1>{guide.title}</h1>

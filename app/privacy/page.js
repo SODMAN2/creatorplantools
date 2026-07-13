@@ -1,13 +1,18 @@
-export const metadata = {
-  title: { absolute: 'Privacy Policy | CreatorPlanTools' },
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/app/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Privacy Policy | CreatorPlanTools',
   description: 'Read the CreatorPlanTools privacy policy, including how browser-based tools, cookies, third-party services, and contact messages are handled.',
-  alternates: { canonical: '/privacy' },
-};
+  path: '/privacy',
+  absoluteTitle: true,
+});
 
 export default function PrivacyPage() {
   return (
     <div className="page">
       <div className="wrap content">
+        <Breadcrumbs items={[{ label: 'Privacy Policy', href: '/privacy' }]} />
         <div className="eyebrow">Privacy</div>
         <h1>Privacy Policy</h1>
         <p className="muted">Last updated: July 13, 2026</p>

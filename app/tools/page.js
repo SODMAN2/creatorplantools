@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { toolList, toolSections } from './toolData';
 
 const faqs = [
@@ -71,6 +72,7 @@ export default function ToolsPage() {
 
   return <div className="page tools-index"><div className="wrap">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <Breadcrumbs items={[{ label: 'Tools', href: '/tools' }]} />
 
     <div className="page-head tools-head">
       <div className="eyebrow">Free creator planning tools</div>

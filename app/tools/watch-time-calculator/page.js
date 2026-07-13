@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import ToolLayout from '@/components/ToolLayout';
 import WatchTimeCalculator from '@/components/WatchTimeCalculator';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata={
+export const metadata=createPageMetadata({
   title:'Watch Time Calculator for YouTube, TikTok & Reels',
   description:'Estimate total watch time in minutes, hours, and days from video views and average view duration. Free calculator for YouTube, TikTok, Reels, and Shorts.',
-  alternates:{canonical:'/tools/watch-time-calculator'}
-};
+  path:'/tools/watch-time-calculator'
+});
 
 const faqs=[
   ['What is watch time?','Watch time is the combined amount of time viewers spend watching a video or group of videos. For example, 100 views with an average view duration of two minutes produces an estimated 200 minutes of watch time.'],
