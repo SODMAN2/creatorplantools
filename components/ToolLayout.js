@@ -3,10 +3,40 @@ import Breadcrumbs from './Breadcrumbs';
 import RelatedContent from './RelatedContent';
 import { getRelatedForTool } from './relatedContentData';
 import { toolList } from '@/app/tools/toolData';
+import JsonLd from './JsonLd';
+
+const BASE_URL = 'https://creatorplantools.com';
 
 export default function ToolLayout({ eyebrow, title, intro, tool, explanation, steps, faqs, children, wide = false }) {
   const toolPath = toolList.find((item) => item.name === title)?.href || '/tools';
+  const url = `${BASE_URL}${toolPath}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        '@id': `${url}#application`,
+        name: title,
+        description: intro,
+        url,
+        applicationCategory: 'UtilitiesApplication',
+        isAccessibleForFree: true,
+        provider: { '@id': `${BASE_URL}/#organization` },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: faqs.map(([question, answer]) => ({
+          '@type': 'Question',
+          name: question,
+          acceptedAnswer: { '@type': 'Answer', text: answer },
+        })),
+      },
+    ],
+  };
+
   return <div className="page"><div className="wrap">
+    <JsonLd data={structuredData} />
     <Breadcrumbs items={[{ label: 'Tools', href: '/tools' }, { label: title, href: toolPath }]} />
     <div className="page-head"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1><p className="muted">{intro}</p></div>
     <div className={`tool${wide ? ' tool-wide' : ''}`}>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import JsonLd from './JsonLd';
 
 const BASE_URL = 'https://creatorplantools.com';
 
@@ -24,6 +25,6 @@ export default function Breadcrumbs({ items }) {
           : <Link href={crumb.href}>{crumb.label}</Link>}
       </span>)}
     </nav>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <JsonLd data={structuredData} />
   </>;
 }

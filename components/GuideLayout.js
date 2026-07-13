@@ -2,9 +2,39 @@ import Link from 'next/link';
 import Breadcrumbs from './Breadcrumbs';
 import RelatedContent from './RelatedContent';
 import { getRelatedForGuide } from './relatedContentData';
+import JsonLd from './JsonLd';
+
+const BASE_URL = 'https://creatorplantools.com';
 
 export default function GuideLayout({ guide }) {
+  const url = `${BASE_URL}/guides/${guide.slug}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${url}#article`,
+        headline: guide.title,
+        description: guide.intro,
+        url,
+        mainEntityOfPage: url,
+        articleSection: 'Creator guides',
+        publisher: { '@id': `${BASE_URL}/#organization` },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: guide.faqs.map(([question, answer]) => ({
+          '@type': 'Question',
+          name: question,
+          acceptedAnswer: { '@type': 'Answer', text: answer },
+        })),
+      },
+    ],
+  };
+
   return <article className="guide-page">
+    <JsonLd data={structuredData} />
     <div className="wrap guide-wrap">
       <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }, { label: guide.title, href: `/guides/${guide.slug}` }]} />
       <header className="guide-head">

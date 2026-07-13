@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { createPageMetadata } from '@/app/seo';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata = createPageMetadata({
   title: 'Creator FAQ | Free Creator Tools and Guides',
@@ -44,7 +45,7 @@ const faqs = [
   {
     question: 'How should I use the tools and guides together?',
     answer:
-      'Use a tool for a quick calculation, check, or planning result, then read a related guide for context and practical next steps. Review the result with your own judgement and adjust it for your content, audience, goals, and platform requirements.',
+      'Start with the creator tools for a quick calculation, check, or planning result, then read the creator guides for context and practical next steps. Review the result with your own judgement and adjust it for your content, audience, goals, and platform requirements.',
   },
   {
     question: 'How often is CreatorPlanTools updated?',
@@ -54,7 +55,7 @@ const faqs = [
   {
     question: 'How can I report a correction or send feedback?',
     answer:
-      'Email hello@creatorplantools.com with the page URL and a short explanation of the correction, problem, or suggestion. Feedback helps us review and improve the site.',
+      'Email hello@creatorplantools.com with the page URL and a short explanation, or use the contact page. Feedback helps us review and improve the site.',
   },
 ];
 
@@ -71,10 +72,7 @@ export default function FAQPage() {
 
   return (
     <div className="page">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <JsonLd data={structuredData} />
       <div className="wrap content">
         <Breadcrumbs items={[{ label: 'FAQ', href: '/faq' }]} />
         <div className="eyebrow">Help and information</div>

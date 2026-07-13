@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
 
 const popularTools = [
   {
@@ -116,10 +117,23 @@ export const metadata = {
 export default function Home() {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'CreatorPlanTools',
-    url: 'https://creatorplantools.com',
-    description: metadata.description,
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': 'https://creatorplantools.com/#website',
+        name: 'CreatorPlanTools',
+        url: 'https://creatorplantools.com/',
+        description: metadata.description,
+        publisher: { '@id': 'https://creatorplantools.com/#organization' },
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://creatorplantools.com/#organization',
+        name: 'CreatorPlanTools',
+        url: 'https://creatorplantools.com/',
+        description: 'Free planning tools and practical guides for YouTubers, short-form creators, and independent content publishers.',
+      },
+    ],
   };
 
   return <>
@@ -135,7 +149,7 @@ export default function Home() {
       </ul>
     </div></section>
 
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <JsonLd data={structuredData} />
 
     <section aria-labelledby="popular-tools-heading"><div className="wrap">
       <div className="section-head"><div className="eyebrow">Popular tools</div><h2 id="popular-tools-heading">Plan your next piece of content</h2><p>Use quick, focused tools for common creator tasks—from script timing and hooks to captions, short-form structure, and watch-time estimates.</p></div>

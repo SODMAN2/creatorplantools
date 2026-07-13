@@ -19,9 +19,7 @@ const faqs=[
 ];
 
 export default function Page(){
-  const faqSchema={'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))};
   return <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema).replace(/</g,'\\u003c')}}/>
     <ToolLayout eyebrow="Creator analytics tool" title="Engagement Rate Calculator" intro="Calculate engagement rate for YouTube, TikTok, Instagram, Shorts, Reels, and other short-form videos using views or followers." tool={<EngagementRateCalculator/>} explanation="Add the interactions on one piece of content, then choose whether to divide them by its views or the account’s followers. The result helps describe how much interaction the content generated relative to that basis; it does not measure content quality or guarantee future performance." steps={['Enter the likes, comments, shares, and saves shown for one post or video. Use zero when a metric is unavailable, and remember that this may make comparisons with other platforms less direct.','Enter the views for that content and the account’s follower count.','Choose “Views” to measure interactions relative to views, or “Followers” to measure them relative to audience size.','Read the percentage and note which method you used. Compare results only when the platform, content type, time period, and formula are reasonably similar.']} faqs={faqs}>
       <h2>What your engagement rate means</h2>
       <p>The calculator first adds likes, comments, shares, and saves. It then divides that total by either views or followers and multiplies by 100. A 4% result by views means the entered interaction total equals four interactions for every 100 views. It does not necessarily mean four different people engaged, because one viewer may like, comment, share, or save the same content.</p>

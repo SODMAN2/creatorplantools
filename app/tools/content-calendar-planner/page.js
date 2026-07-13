@@ -31,16 +31,7 @@ export const metadata = {
 };
 
 export default function Page() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      { '@type': 'WebApplication', name: 'Content Calendar Planner', url: 'https://creatorplantools.com/tools/content-calendar-planner', description: metadata.description, applicationCategory: 'ProductivityApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' } },
-      { '@type': 'FAQPage', mainEntity: faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
-    ],
-  };
-
   return <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
     <ToolLayout
       wide
       eyebrow="Creator planning tool"
