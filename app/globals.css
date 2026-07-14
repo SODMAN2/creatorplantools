@@ -62,3 +62,18 @@
 .faq-list .faq p{margin:0;color:var(--muted)}
 .faq-more{padding:42px 0 0}
 .faq-more h2{margin-top:0}
+.tool-wide{grid-template-columns:minmax(0,2fr) minmax(260px,.7fr)}
+.outline-builder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.outline-form .button{margin-top:2px}
+.outline-preview{padding:24px;background:var(--light);border:1px solid var(--line);border-radius:12px;align-self:start}
+.outline-preview-head{padding-bottom:18px;border-bottom:1px solid var(--line)}
+.outline-preview-head span{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.outline-preview h2{font-size:25px;line-height:1.25;margin:4px 0 10px}
+.outline-preview-head p{margin:4px 0}
+.outline-section{padding:14px 0;border-bottom:1px solid var(--line)}
+.outline-section:last-child{border-bottom:0;padding-bottom:0}
+.outline-section h3{font-size:17px;margin:0 0 6px}
+.outline-section p,.outline-section ol,.outline-section ul{margin:0}
+.outline-section li{margin:4px 0}
+.preserve-lines{white-space:pre-wrap}
+@media(max-width:900px){.outline-builder,.tool-wide{grid-template-columns:1fr}}

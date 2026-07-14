@@ -3,6 +3,12 @@ import JsonLd from '@/components/JsonLd';
 
 const popularTools = [
   {
+    icon: 'OUT',
+    name: 'Video Script Outline Builder',
+    description: 'Plan a hook, intro, main points, transitions, call to action, and notes before recording.',
+    href: '/tools/video-script-outline-builder',
+  },
+  {
     icon: 'CAL',
     name: 'Content Calendar Planner',
     description: 'Organise weekly or monthly content ideas by platform, date, format, and status.',

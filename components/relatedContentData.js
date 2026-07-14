@@ -1,4 +1,5 @@
 const tools = {
+  outline: ['Video Script Outline Builder', '/tools/video-script-outline-builder', 'Turn your video idea into a clear recording outline.'],
   calendar: ['Content Calendar Planner', '/tools/content-calendar-planner', 'Organise content ideas by platform, date, format, and status.'],
   script: ['YouTube Script Length Calculator', '/tools/youtube-script-length-calculator', 'Estimate a word-count target from runtime and speaking pace.'],
   title: ['YouTube Title Length Checker', '/tools/youtube-title-length-checker', 'Review a title\'s length, word count, and readability.'],
@@ -37,6 +38,7 @@ const guides = {
 };
 
 const toolMap = {
+  'Video Script Outline Builder': [['hook', 'script', 'voiceover', 'calendar'], ['preRecord', 'hooks', 'facelessVideo', 'workflow']],
   'Content Calendar Planner': [['planner', 'hook'], ['calendar', 'batch', 'repurpose']],
   'YouTube Script Length Calculator': [['voiceover', 'hook'], ['script', 'checklist']],
   'YouTube Title Length Checker': [['description', 'script'], ['checklist', 'hooks']],

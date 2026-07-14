@@ -37,6 +37,7 @@ export const toolSections = [
     ],
     tools: [
       { icon: 'CAL', name: 'Content Calendar Planner', description: 'Organise weekly or monthly content ideas by platform, format, date, and production status.', href: '/tools/content-calendar-planner' },
+      { icon: 'OUT', name: 'Video Script Outline Builder', description: 'Plan a hook, intro, main points, transitions, call to action, and recording notes.', href: '/tools/video-script-outline-builder' },
       { icon: 'H', name: 'Video Hook Checker', description: 'Check a video opening line’s words, characters, estimated speaking time, and practical hook length.', href: '/tools/video-hook-checker' },
       { icon: 'VO', name: 'Voiceover Duration Calculator', description: 'Turn a script word count into a realistic voiceover duration at different narration speeds.', href: '/tools/voiceover-duration-calculator' },
     ],
