@@ -5,8 +5,8 @@ import { getRelatedForGuide } from './relatedContentData';
 import JsonLd from './JsonLd';
 
 const BASE_URL = 'https://creatorplantools.com';
-const LAST_UPDATED = 'July 13, 2026';
-const LAST_UPDATED_ISO = '2026-07-13';
+const LAST_UPDATED = 'July 14, 2026';
+const LAST_UPDATED_ISO = '2026-07-14';
 
 export default function GuideLayout({ guide }) {
   const url = `${BASE_URL}/guides/${guide.slug}`;

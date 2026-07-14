@@ -12,6 +12,8 @@ const guideCategories = [
       'how-long-should-a-youtube-script-be',
       'how-to-plan-b-roll-for-videos',
       'how-to-write-better-video-descriptions',
+      'how-to-plan-a-video-before-recording',
+      'how-to-plan-a-youtube-video-series',
     ],
     tools: [
       { label: 'YouTube Script Length Calculator', href: '/tools/youtube-script-length-calculator' },
@@ -41,6 +43,7 @@ const guideCategories = [
       'how-to-plan-youtube-shorts',
       'tiktok-video-structure',
       'how-to-write-a-video-hook',
+      'how-to-use-hooks-captions-and-hashtags-together',
     ],
     tools: [
       { label: 'TikTok Video Planner', href: '/tools/tiktok-video-planner' },
@@ -58,6 +61,8 @@ const guideCategories = [
       'how-to-batch-create-content',
       'how-to-turn-one-video-idea-into-many-posts',
       'how-often-should-creators-post',
+      'how-to-create-a-simple-content-workflow',
+      'how-to-repurpose-long-videos-into-shorts',
     ],
     tools: [
       { label: 'Browse all creator tools', href: '/tools' },

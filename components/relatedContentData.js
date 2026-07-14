@@ -29,6 +29,11 @@ const guides = {
   posting: ['How Often Should Creators Post?', '/guides/how-often-should-creators-post', 'Choose a publishing rhythm you can maintain without rushing.'],
   batch: ['How to Batch Create Content', '/guides/how-to-batch-create-content', 'Group compatible tasks while protecting quality.'],
   repurpose: ['Turn One Video Idea Into Multiple Posts', '/guides/how-to-turn-one-video-idea-into-many-posts', 'Adapt one useful idea across formats without making duplicates.'],
+  preRecord: ['How to Plan a Video Before Recording', '/guides/how-to-plan-a-video-before-recording', 'Prepare the outcome, outline, words, visuals, and recording setup.'],
+  workflow: ['Simple Content Workflow for YouTube, TikTok, and Reels', '/guides/how-to-create-a-simple-content-workflow', 'Move ideas through production, review, scheduling, and learning.'],
+  package: ['Use Hooks, Captions, and Hashtags Together', '/guides/how-to-use-hooks-captions-and-hashtags-together', 'Give each part of a short-form post a clear, connected job.'],
+  series: ['How to Plan a YouTube Video Series', '/guides/how-to-plan-a-youtube-video-series', 'Map useful standalone episodes into a connected viewer journey.'],
+  longToShorts: ['Repurpose Long Videos into Shorts, TikToks, and Reels', '/guides/how-to-repurpose-long-videos-into-shorts', 'Turn standalone long-form moments into complete vertical videos.'],
 };
 
 const toolMap = {
@@ -62,6 +67,11 @@ const guideMap = {
   'how-to-batch-create-content': [['voiceover', 'planner'], ['calendar', 'posting']],
   'how-to-turn-one-video-idea-into-many-posts': [['planner', 'caption'], ['calendar', 'shorts']],
   'how-to-plan-content-for-a-faceless-channel': [['voiceover', 'hook'], ['facelessVideo', 'professional']],
+  'how-to-plan-a-video-before-recording': [['hook', 'script'], ['hooks', 'checklist']],
+  'how-to-create-a-simple-content-workflow': [['calendar', 'caption'], ['batch', 'repurpose']],
+  'how-to-use-hooks-captions-and-hashtags-together': [['hook', 'hashtags', 'caption'], ['hooks', 'repurpose']],
+  'how-to-plan-a-youtube-video-series': [['calendar', 'script', 'description'], ['batch', 'checklist']],
+  'how-to-repurpose-long-videos-into-shorts': [['calendar', 'caption', 'hashtags'], ['repurpose', 'facelessChannel']],
 };
 
 const item = ([label, href, description]) => ({ label, href, description });
