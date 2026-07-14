@@ -3,6 +3,12 @@ import JsonLd from '@/components/JsonLd';
 
 const popularTools = [
   {
+    icon: 'TXT',
+    name: 'Thumbnail Text Checker',
+    description: 'Check whether thumbnail or cover text is short, clear, and easy to scan.',
+    href: '/tools/thumbnail-text-checker',
+  },
+  {
     icon: 'OK',
     name: 'Video Publishing Checklist',
     description: 'Review planning, script, packaging, visual, and upload details before you publish.',

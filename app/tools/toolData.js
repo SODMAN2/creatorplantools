@@ -36,6 +36,7 @@ export const toolSections = [
       { label: 'How to batch create content', href: '/guides/how-to-batch-create-content' },
     ],
     tools: [
+      { icon: 'TXT', name: 'Thumbnail Text Checker', description: 'Check thumbnail or cover text word count, character count, and readability for YouTube, Shorts, TikTok, and Reels.', href: '/tools/thumbnail-text-checker' },
       { icon: 'OK', name: 'Video Publishing Checklist', description: 'Review 24 planning, script, packaging, visual, and upload checks before publishing a video.', href: '/tools/video-publishing-checklist' },
       { icon: 'CAL', name: 'Content Calendar Planner', description: 'Organise weekly or monthly content ideas by platform, format, date, and production status.', href: '/tools/content-calendar-planner' },
       { icon: 'OUT', name: 'Video Script Outline Builder', description: 'Plan a hook, intro, main points, transitions, call to action, and recording notes.', href: '/tools/video-script-outline-builder' },
