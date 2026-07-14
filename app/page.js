@@ -3,6 +3,12 @@ import JsonLd from '@/components/JsonLd';
 
 const popularTools = [
   {
+    icon: 'OK',
+    name: 'Video Publishing Checklist',
+    description: 'Review planning, script, packaging, visual, and upload details before you publish.',
+    href: '/tools/video-publishing-checklist',
+  },
+  {
     icon: 'OUT',
     name: 'Video Script Outline Builder',
     description: 'Plan a hook, intro, main points, transitions, call to action, and notes before recording.',
