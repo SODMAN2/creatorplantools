@@ -37,6 +37,11 @@ const guides = {
   package: ['Use Hooks, Captions, and Hashtags Together', '/guides/how-to-use-hooks-captions-and-hashtags-together', 'Give each part of a short-form post a clear, connected job.'],
   series: ['How to Plan a YouTube Video Series', '/guides/how-to-plan-a-youtube-video-series', 'Map useful standalone episodes into a connected viewer journey.'],
   longToShorts: ['Repurpose Long Videos into Shorts, TikToks, and Reels', '/guides/how-to-repurpose-long-videos-into-shorts', 'Turn standalone long-form moments into complete vertical videos.'],
+  ideaToUpload: ['Plan a YouTube Video from Idea to Upload', '/guides/how-to-plan-a-youtube-video-from-idea-to-upload', 'Move one useful idea through research, production, packaging, and publishing.'],
+  retentionStructure: ['Improve Video Retention with Better Structure', '/guides/how-to-improve-video-retention-with-better-structure', 'Build a clear viewing path without relying on hype or guarantees.'],
+  weeklyPlan: ['Create a Weekly Content Plan', '/guides/how-to-create-a-weekly-content-plan', 'Turn realistic weekly capacity into a cross-platform publishing plan.'],
+  clearPackaging: ['Write Clear Titles, Descriptions, and Captions', '/guides/how-to-write-clear-video-titles-descriptions-and-captions', 'Give each piece of publishing copy a clear and accurate job.'],
+  facelessEditPrep: ['Prepare a Faceless Video Before Editing', '/guides/how-to-prepare-a-faceless-video-before-editing', 'Organise narration, visuals, rights, and files for a cleaner edit.'],
 };
 
 const toolMap = {
@@ -78,6 +83,11 @@ const guideMap = {
   'how-to-use-hooks-captions-and-hashtags-together': [['hook', 'hashtags', 'caption'], ['hooks', 'repurpose']],
   'how-to-plan-a-youtube-video-series': [['calendar', 'script', 'description'], ['batch', 'checklist']],
   'how-to-repurpose-long-videos-into-shorts': [['calendar', 'caption', 'hashtags'], ['repurpose', 'facelessChannel']],
+  'how-to-plan-a-youtube-video-from-idea-to-upload': [['outline', 'publishing', 'title'], ['preRecord', 'checklist', 'clearPackaging']],
+  'how-to-improve-video-retention-with-better-structure': [['outline', 'hook', 'watchTime'], ['hooks', 'script', 'preRecord']],
+  'how-to-create-a-weekly-content-plan': [['calendar', 'planner', 'voiceover'], ['calendar', 'workflow', 'batch']],
+  'how-to-write-clear-video-titles-descriptions-and-captions': [['title', 'description', 'caption'], ['descriptions', 'package', 'checklist']],
+  'how-to-prepare-a-faceless-video-before-editing': [['outline', 'voiceover', 'publishing'], ['facelessVideo', 'broll', 'professional']],
 };
 
 const item = ([label, href, description]) => ({ label, href, description });

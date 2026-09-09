@@ -5,11 +5,13 @@ import { getRelatedForGuide } from './relatedContentData';
 import JsonLd from './JsonLd';
 
 const BASE_URL = 'https://creatorplantools.com';
-const LAST_UPDATED = 'July 14, 2026';
-const LAST_UPDATED_ISO = '2026-07-14';
+const DEFAULT_LAST_UPDATED = 'July 14, 2026';
+const DEFAULT_LAST_UPDATED_ISO = '2026-07-14';
 
 export default function GuideLayout({ guide }) {
   const url = `${BASE_URL}/guides/${guide.slug}`;
+  const lastUpdated = guide.lastUpdated || DEFAULT_LAST_UPDATED;
+  const lastUpdatedIso = guide.lastUpdatedIso || DEFAULT_LAST_UPDATED_ISO;
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -21,7 +23,7 @@ export default function GuideLayout({ guide }) {
         url,
         mainEntityOfPage: url,
         articleSection: 'Creator guides',
-        dateModified: LAST_UPDATED_ISO,
+        dateModified: lastUpdatedIso,
         publisher: { '@id': `${BASE_URL}/#organization` },
       },
       {
@@ -44,7 +46,7 @@ export default function GuideLayout({ guide }) {
         <div className="eyebrow">Creator guide</div>
         <h1>{guide.title}</h1>
         <p>{guide.intro}</p>
-        <p className="guide-updated"><time dateTime={LAST_UPDATED_ISO}>Last updated: {LAST_UPDATED}</time></p>
+        <p className="guide-updated"><time dateTime={lastUpdatedIso}>Last updated: {lastUpdated}</time></p>
       </header>
       <div className="guide-content">
         {guide.sections.map((section) => <section key={section.heading}>

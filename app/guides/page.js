@@ -13,6 +13,9 @@ const guideCategories = [
       'how-to-plan-b-roll-for-videos',
       'how-to-write-better-video-descriptions',
       'how-to-plan-a-video-before-recording',
+      'how-to-plan-a-youtube-video-from-idea-to-upload',
+      'how-to-improve-video-retention-with-better-structure',
+      'how-to-write-clear-video-titles-descriptions-and-captions',
       'how-to-plan-a-youtube-video-series',
     ],
     tools: [
@@ -29,6 +32,7 @@ const guideCategories = [
       'how-to-plan-a-faceless-youtube-video',
       'how-to-plan-content-for-a-faceless-channel',
       'how-to-make-faceless-content-look-professional',
+      'how-to-prepare-a-faceless-video-before-editing',
     ],
     tools: [
       { label: 'Voiceover Duration Calculator', href: '/tools/voiceover-duration-calculator' },
@@ -62,6 +66,7 @@ const guideCategories = [
       'how-to-turn-one-video-idea-into-many-posts',
       'how-often-should-creators-post',
       'how-to-create-a-simple-content-workflow',
+      'how-to-create-a-weekly-content-plan',
       'how-to-repurpose-long-videos-into-shorts',
     ],
     tools: [
