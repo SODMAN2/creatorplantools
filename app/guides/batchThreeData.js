@@ -81,6 +81,8 @@ export const batchThreeGuides = {
     slug: 'how-to-batch-create-content',
     title: 'How to Batch Create Content Without Burning Out',
     description: 'Batch create content with a sustainable workflow for planning, scripting, recording, editing, quality control, and realistic breaks.',
+    lastUpdated: 'September 10, 2026',
+    lastUpdatedIso: '2026-09-10',
     intro: 'Batching can reduce setup time and repeated decisions, but an oversized batch can become an exhausting production line. The goal is a calmer workflow, not the highest possible number of posts.',
     sections: [
       {heading:'Choose what should be batched',paragraphs:[
@@ -102,7 +104,7 @@ export const batchThreeGuides = {
       {heading:'Separate creation from quality control',paragraphs:[
         'During recording, mark strong takes and obvious mistakes, but avoid polishing every clip on the spot. In editing, build rough cuts first, then review them as a group for missing shots, repeated phrases, inconsistent sound, and visual errors. A second pass is better for captions, links, credits, and packaging.',
         'Schedule content only after checking each post as an individual piece. Watch on a phone, confirm the first frame, listen on ordinary speakers, and verify that the title and description match the finished version. A batch saves setup time; it does not reduce the need for accurate claims, permissions, and final review.'
-      ]},
+      ],externalResource:{before:'After a post has passed review, some creators use scheduling tools such as ',label:'SocialRails',href:'https://socialrails.com/',after:' to move approved posts from a content calendar into a publishing queue rather than switching between platforms at upload time.'}},
       {heading:'Protect energy and improve the next batch',paragraphs:[
         'Notice the signs that quality or wellbeing is slipping: repeated lines, rushed delivery, headaches, skipped meals, growing irritability, or a backlog that feels impossible. Stop when the planned session ends. Move unfinished work deliberately rather than treating it as a personal failure. Sustainable output includes rest and time away from performance metrics.',
         'After each batch, record the planned count, completed count, total time, and main interruption. Change one thing next time: fewer scripts, better preparation, shorter sessions, or an easier format mix. The best batch size may change with the subject and season. A flexible system is more durable than a rule copied from another creator.',
