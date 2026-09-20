@@ -20,14 +20,15 @@ export default function WatchTimeCalculator(){
   const format=(value)=>Number.isFinite(value)?numberFormatter.format(value):'Too large to calculate';
 
   return <>
+    <p id="watch-time-input-note" className="muted">Use views and average view duration from the same video or content set, platform, and reporting/date range. The view count must match the metric used to calculate that average.</p>
     <div className="field">
       <label htmlFor="watch-time-views">Total views</label>
-      <input id="watch-time-views" type="number" min="0" step="1" inputMode="numeric" value={views} onChange={event=>setViews(event.target.value)}/>
+      <input id="watch-time-views" type="number" min="0" step="1" inputMode="numeric" aria-describedby="watch-time-input-note" value={views} onChange={event=>setViews(event.target.value)}/>
     </div>
     <div className="duration-fields">
       <div className="field">
         <label htmlFor="average-view-duration">Average view duration</label>
-        <input id="average-view-duration" type="number" min="0" step="0.1" inputMode="decimal" value={duration} onChange={event=>setDuration(event.target.value)}/>
+        <input id="average-view-duration" type="number" min="0" step="0.1" inputMode="decimal" aria-describedby="watch-time-input-note" value={duration} onChange={event=>setDuration(event.target.value)}/>
       </div>
       <div className="field">
         <label htmlFor="duration-unit">Duration unit</label>
@@ -41,7 +42,7 @@ export default function WatchTimeCalculator(){
       <div><span>Total minutes</span><strong>{format(totalMinutes)}</strong></div>
       <div><span>Total hours</span><strong>{format(totalHours)}</strong></div>
       <div><span>Total days</span><strong>{format(totalDays)}</strong></div>
-      <p>Estimated watch time across all entered views. One day equals 24 total watch hours.</p>
+      <p>Estimated accumulated viewing time only, not YouTube monetization-eligible public watch hours. One day equals 24 total watch hours.</p>
     </div>
     <p className="formula-note">Formula: views × average view duration</p>
   </>;
