@@ -78,6 +78,7 @@ export const batchTwoGuides = {
     ]
   },
   broll: {
+    lastUpdated: 'September 20, 2026', lastUpdatedIso: '2026-09-20',
     slug:'how-to-plan-b-roll-for-videos',
     title:'How to Plan B-Roll for YouTube and Faceless Videos',
     description:'Plan useful B-roll for YouTube and faceless videos with a practical shot-list workflow for filming, sourcing, organising, and editing visuals.',
@@ -90,7 +91,7 @@ export const batchTwoGuides = {
       {heading:'Mark visual opportunities in the outline',paragraphs:[
         'Plan visuals while outlining rather than after recording. Beside each beat, note the strongest way to show it: original footage, screen recording, still image, chart, animation, text, or no change at all. Important images sometimes need several seconds, so do not force a cut on a fixed timer.',
         'Highlight claims that need proof and abstract ideas that need a concrete example. Also mark where the presenter or primary visual should return. This creates rhythm and prevents a faceless edit from becoming an endless montage.'
-      ],links:[{label:'Use the complete faceless-video workflow',href:'/guides/how-to-plan-a-faceless-youtube-video'}]},
+      ],links:[{label:'Pair narration with shots in a two-column video script template',href:'/guides/two-column-video-script-template'},{label:'Use the complete faceless-video workflow',href:'/guides/how-to-plan-a-faceless-youtube-video'}]},
       {heading:'Turn the visual plan into a shot list',paragraphs:[
         'A useful shot list names the scene, subject, action, framing, orientation, required prop, and matching script beat. Group shots by location and setup so they can be captured efficiently. Record a safe wide version, useful medium view, and close detail when the action benefits from options.',
         'Allow actions to begin before and finish after the moment you think you need. Hold static shots long enough for clean editing. Check focus and exposure between setups, and record alternate takes for complex movements. For vertical repurposing, capture a separate vertical frame when a horizontal crop would hide the subject.'

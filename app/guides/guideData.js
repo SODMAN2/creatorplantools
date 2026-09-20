@@ -77,6 +77,7 @@ export const guides = {
     ]
   },
   voiceover: {
+    lastUpdated: 'September 20, 2026', lastUpdatedIso: '2026-09-20',
     slug:'voiceover-pacing-for-videos', title:'Voiceover Pacing for Videos',
     description:'Improve voiceover pacing for YouTube, TikTok, Instagram, tutorials, and faceless videos with practical timing and delivery techniques.',
     intro:'Good voiceover pacing is not simply fast or slow. It gives viewers enough time to understand each idea while keeping enough momentum to hold attention.',
@@ -92,7 +93,7 @@ export const guides = {
       {heading:'Write pauses into the script',paragraphs:[
         'Pauses give meaning to words. Add a short beat after the hook, before an important result, and after a dense explanation. Paragraph breaks can signal a change of thought. Dashes, ellipses, and bold emphasis may help a narrator, but use a simple notation consistently so it is not distracting.',
         'Not every gap must be silent. A pause can hold a product close-up, chart, reaction, sound effect, or text reveal. Plan these moments with the editor so the voiceover supports the visual instead of racing against it.'
-      ],example:'“The campaign reached 50,000 people. [beat] But only twelve clicked.” The pause gives the first number time to register and makes the contrast easier to understand.'},
+      ],example:'“The campaign reached 50,000 people. [beat] But only twelve clicked.” The pause gives the first number time to register and makes the contrast easier to understand.',links:[{label:'Copy a recording-ready voiceover template with pauses, emphasis and pickups',href:'/guides/voiceover-script-format-template'}]},
       {heading:'Use emphasis instead of constant speed',paragraphs:[
         'When every word is delivered with equal energy, the voiceover becomes tiring. Stress the words that carry contrast, action, or consequence. Let connecting words stay lighter. Vary sentence length: a longer explanation can flow into a short conclusion. Like this.',
         'Smile when the tone should feel welcoming, stand if it improves breath support, and keep water nearby. Record two or three versions of difficult lines rather than trying to repair one strained take. A natural performance is usually easier to edit than a technically perfect but rigid read.'
@@ -196,7 +197,8 @@ import { batchTwoGuides } from './batchTwoData';
 import { batchThreeGuides } from './batchThreeData';
 import { batchFourGuides } from './batchFourData';
 import { batchFiveGuides } from './batchFiveData';
+import { seoBatchOneGuides } from './seoBatchOneData';
 
-Object.assign(guides, batchTwoGuides, batchThreeGuides, batchFourGuides, batchFiveGuides);
+Object.assign(guides, batchTwoGuides, batchThreeGuides, batchFourGuides, batchFiveGuides, seoBatchOneGuides);
 
 export const guideList = Object.values(guides);

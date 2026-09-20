@@ -10,8 +10,11 @@ const guideCategories = [
     slugs: [
       'youtube-video-planning-checklist',
       'how-long-should-a-youtube-script-be',
+      'two-column-video-script-template',
       'how-to-plan-b-roll-for-videos',
       'how-to-write-better-video-descriptions',
+      'youtube-tutorial-description-template',
+      'youtube-chapters-not-showing',
       'how-to-plan-a-video-before-recording',
       'how-to-plan-a-youtube-video-from-idea-to-upload',
       'how-to-improve-video-retention-with-better-structure',
@@ -62,6 +65,7 @@ const guideCategories = [
     slugs: [
       'content-calendar-for-creators',
       'voiceover-pacing-for-videos',
+      'voiceover-script-format-template',
       'how-to-batch-create-content',
       'how-to-turn-one-video-idea-into-many-posts',
       'how-often-should-creators-post',

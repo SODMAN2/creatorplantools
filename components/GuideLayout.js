@@ -3,6 +3,7 @@ import Breadcrumbs from './Breadcrumbs';
 import RelatedContent from './RelatedContent';
 import { getRelatedForGuide } from './relatedContentData';
 import JsonLd from './JsonLd';
+import CopyableTemplate from './CopyableTemplate';
 
 const BASE_URL = 'https://creatorplantools.com';
 const DEFAULT_LAST_UPDATED = 'July 14, 2026';
@@ -38,7 +39,7 @@ export default function GuideLayout({ guide }) {
     ],
   };
 
-  return <article className="guide-page">
+  return <article className={`guide-page${guide.sections.some((section) => section.template) ? ' guide-resource' : ''}`}>
     <JsonLd data={structuredData} />
     <div className="wrap guide-wrap">
       <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }, { label: guide.title, href: `/guides/${guide.slug}` }]} />
@@ -53,6 +54,12 @@ export default function GuideLayout({ guide }) {
           <h2>{section.heading}</h2>
           {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {section.list && <ul>{section.list.map((item) => <li key={item}>{item}</li>)}</ul>}
+          {section.steps && <ol>{section.steps.map((item) => <li key={item}>{item}</li>)}</ol>}
+          {section.template && <CopyableTemplate label={section.templateLabel || section.heading} text={section.template} />}
+          {section.table && <div className="guide-table-scroll" role="region" aria-label={section.table.caption} tabIndex={0}>
+            <table className="guide-table"><caption>{section.table.caption}</caption><thead><tr>{section.table.headers.map((heading) => <th scope="col" key={heading}>{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table>
+          </div>}
+          {section.diagnostics && <ol className="guide-diagnostics">{section.diagnostics.map((step, index) => <li key={step.question}><h3>{index + 1}. {step.question}</h3><p><strong>No:</strong> {step.no}</p><p><strong>Yes:</strong> {step.yes}</p></li>)}</ol>}
           {section.example && <div className="guide-example"><strong>Practical example</strong><p>{section.example}</p></div>}
           {section.externalResource && <p>{section.externalResource.before}<a className="content-link" href={section.externalResource.href} target="_blank" rel="nofollow noopener noreferrer">{section.externalResource.label}</a>{section.externalResource.after}</p>}
           {section.links?.map((link) => <p className="guide-related" key={link.href}>Related: <Link href={link.href}>{link.label}</Link></p>)}

@@ -39,6 +39,7 @@ export const batchThreeGuides = {
     ]
   },
   videoDescriptions: {
+    lastUpdated: 'September 20, 2026', lastUpdatedIso: '2026-09-20',
     slug: 'how-to-write-better-video-descriptions',
     title: 'How to Write Better Video Descriptions for YouTube and Social Media',
     description: 'Write clear YouTube and social media video descriptions with useful summaries, natural keywords, links, credits, chapters, and focused calls to action.',
@@ -59,7 +60,7 @@ export const batchThreeGuides = {
       {heading:'Organise details so they are easy to scan',paragraphs:[
         'For a longer YouTube description, use short sections. After the summary, add the most relevant resource or next video, then chapters if they help navigation, sources or credits, and any necessary disclosure. Use descriptive link labels when the platform permits them. Check that every destination works and matches the surrounding promise.',
         'Chapters should describe real sections with accurate timestamps. Credits should identify the creator or asset and follow the licence terms. If a link is an affiliate link, sponsorship, or other commercial relationship, disclose it clearly according to the rules that apply to you and the platform. Do not hide important context behind vague language.'
-      ],list:['Two-line summary','One primary next step','Chapters for longer videos','Sources and asset credits','Required disclosures','Optional contact or channel information']},
+      ],list:['Two-line summary','One primary next step','Chapters for longer videos','Sources and asset credits','Required disclosures','Optional contact or channel information'],links:[{label:'Copy the tutorial description template with chapters and resources',href:'/guides/youtube-tutorial-description-template'},{label:'Troubleshoot missing YouTube chapters using timestamps and eligibility',href:'/guides/youtube-chapters-not-showing'}]},
       {heading:'Adapt the copy for each social platform',paragraphs:[
         'A short-form caption has less space and often sits beside an immediately playing video. Add context the first frame cannot carry, state the takeaway, and use one focused CTA if needed. Hashtags can label the subject, but a long generic list is not a substitute for a clear sentence. Use only tags that genuinely describe the post.',
         'When repurposing, rewrite the caption around the version people will actually see. A clip taken from a longer tutorial should not refer to an example that was removed. Replace "link below" with the correct platform-specific direction. Remove watermarks, stale campaign dates, and calls to action that lead nowhere on the new platform.'
