@@ -36,6 +36,7 @@ export default function Page(){
       </div>
       <p className="muted">These examples only demonstrate the formula. They are not benchmarks, platform targets, or promised results.</p>
       <h2>Use watch time with other creator metrics</h2>
+      <p>To calculate the <strong>average share of one video’s runtime watched</strong>, use the <Link className="text-link" href="/tools/average-percentage-viewed-calculator">Average Percentage Viewed Calculator</Link>. That divides average view duration by video length; this Watch Time Calculator estimates total accumulated viewing time across views.</p>
       <p>Watch time is more useful when the views, duration, content, platform, and date range all match. To review how viewers interact with a post, use the <Link className="text-link" href="/tools/engagement-rate-calculator">Engagement Rate Calculator</Link>. For cautious YouTube income scenarios, try the <Link className="text-link" href="/tools/youtube-revenue-calculator">YouTube Revenue Calculator</Link>. You can also improve the structure behind the numbers with the <Link className="text-link" href="/guides/tiktok-video-structure">TikTok video structure guide</Link> or plan a longer upload with the <Link className="text-link" href="/guides/youtube-video-planning-checklist">YouTube video planning checklist</Link>.</p>
     </ToolLayout>
   </>;

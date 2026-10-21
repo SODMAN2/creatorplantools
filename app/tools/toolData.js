@@ -56,6 +56,7 @@ export const toolSections = [
       { icon: '$', name: 'YouTube Revenue Calculator', description: 'Estimate possible monthly and yearly YouTube revenue from views and RPM scenarios.', href: '/tools/youtube-revenue-calculator' },
       { icon: '%', name: 'Engagement Rate Calculator', description: 'Calculate engagement by views or followers for videos and social media posts.', href: '/tools/engagement-rate-calculator' },
       { icon: 'WT', name: 'Watch Time Calculator', description: 'Estimate total watch time in minutes, hours, and days from views and average view duration.', href: '/tools/watch-time-calculator' },
+      { icon: 'APV', name: 'Average Percentage Viewed Calculator', description: 'Convert average view duration and video length into a percentage, with worked arithmetic and replay-aware results above 100%.', href: '/tools/average-percentage-viewed-calculator' },
     ],
   },
 ];

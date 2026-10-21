@@ -14,6 +14,7 @@ const tools = {
   revenue: ['YouTube Revenue Calculator', '/tools/youtube-revenue-calculator', 'Explore cautious scenarios using views and your own RPM.'],
   engagement: ['Engagement Rate Calculator', '/tools/engagement-rate-calculator', 'Calculate interactions relative to views or followers.'],
   watchTime: ['Watch Time Calculator', '/tools/watch-time-calculator', 'Convert views and average duration into total watch time.'],
+  apv: ['Average Percentage Viewed Calculator', '/tools/average-percentage-viewed-calculator', 'Convert average view duration into a share of one video’s runtime.'],
 };
 
 const guides = {
@@ -58,8 +59,9 @@ const toolMap = {
   'Video Hook Checker': [['planner', 'caption'], ['hooks', 'tiktok']],
   'Voiceover Duration Calculator': [['script', 'hook'], ['voiceover', 'broll']],
   'YouTube Revenue Calculator': [['watchTime', 'engagement'], ['checklist', 'posting']],
-  'Engagement Rate Calculator': [['watchTime', 'revenue'], ['posting', 'calendar']],
-  'Watch Time Calculator': [['engagement', 'revenue'], ['checklist', 'tiktok']],
+  'Engagement Rate Calculator': [['watchTime', 'apv', 'revenue'], ['posting', 'calendar']],
+  'Watch Time Calculator': [['apv', 'engagement', 'revenue'], ['checklist', 'tiktok']],
+  'Average Percentage Viewed Calculator': [['watchTime', 'engagement'], ['retentionStructure']],
 };
 
 const guideMap = {
@@ -84,7 +86,7 @@ const guideMap = {
   'how-to-plan-a-youtube-video-series': [['calendar', 'script', 'description'], ['batch', 'checklist']],
   'how-to-repurpose-long-videos-into-shorts': [['calendar', 'caption', 'hashtags'], ['repurpose', 'facelessChannel']],
   'how-to-plan-a-youtube-video-from-idea-to-upload': [['outline', 'publishing', 'title'], ['preRecord', 'checklist', 'clearPackaging']],
-  'how-to-improve-video-retention-with-better-structure': [['outline', 'hook', 'watchTime'], ['hooks', 'script', 'preRecord']],
+  'how-to-improve-video-retention-with-better-structure': [['outline', 'hook', 'watchTime', 'apv'], ['hooks', 'script', 'preRecord']],
   'how-to-create-a-weekly-content-plan': [['calendar', 'planner', 'voiceover'], ['calendar', 'workflow', 'batch']],
   'how-to-write-clear-video-titles-descriptions-and-captions': [['title', 'description', 'caption'], ['descriptions', 'package', 'checklist']],
   'how-to-prepare-a-faceless-video-before-editing': [['outline', 'voiceover', 'publishing'], ['facelessVideo', 'broll', 'professional']],
