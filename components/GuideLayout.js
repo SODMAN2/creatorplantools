@@ -61,7 +61,7 @@ export default function GuideLayout({ guide }) {
           </div>}
           {section.diagnostics && <ol className="guide-diagnostics">{section.diagnostics.map((step, index) => <li key={step.question}><h3>{index + 1}. {step.question}</h3><p><strong>No:</strong> {step.no}</p><p><strong>Yes:</strong> {step.yes}</p></li>)}</ol>}
           {section.example && <div className="guide-example"><strong>Practical example</strong><p>{section.example}</p></div>}
-          {section.externalResource && <p>{section.externalResource.before}<a className="content-link" href={section.externalResource.href} target="_blank" rel="nofollow noopener noreferrer">{section.externalResource.label}</a>{section.externalResource.after}</p>}
+          {section.externalResource && <p>{section.externalResource.before}<a data-analytics-resource className="content-link" href={section.externalResource.href} target="_blank" rel="nofollow noopener noreferrer">{section.externalResource.label}</a>{section.externalResource.after}</p>}
           {section.links?.map((link) => <p className="guide-related" key={link.href}>Related: <Link href={link.href}>{link.label}</Link></p>)}
         </section>)}
         <section className="guide-cta">

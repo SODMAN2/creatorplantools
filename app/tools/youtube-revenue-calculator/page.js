@@ -38,7 +38,7 @@ export default function Page() {
       <div className="example"><h3>200,000 monthly views</h3><p>200,000 ÷ 1,000 × $5 RPM gives an estimate of <strong>$1,000 per month</strong>, or <strong>$12,000 per year</strong> at the same monthly rate.</p></div>
     </div>
     <p className="muted">These examples are simple scenarios, not typical or promised results. Try a low, middle, and high RPM to see a more useful range.</p>
-    <p>Read <a className="text-link" href="https://support.google.com/youtube/answer/9314357?hl=en">YouTube’s official RPM and revenue definitions</a> to choose the right input from your analytics.</p>
+    <p>Read <a data-analytics-resource className="text-link" href="https://support.google.com/youtube/answer/9314357?hl=en">YouTube’s official RPM and revenue definitions</a> to choose the right input from your analytics.</p>
     <h2>Plan the content behind the estimate</h2>
     <p>Revenue is only one part of a sustainable channel plan. Use the <Link className="text-link" href="/tools/youtube-script-length-calculator">YouTube Script Length Calculator</Link> to set a first-draft word count, then follow the <Link className="text-link" href="/guides/youtube-video-planning-checklist">YouTube video planning checklist</Link> to organise production. Faceless creators can also use the <Link className="text-link" href="/guides/how-to-plan-a-faceless-youtube-video">faceless YouTube video planning guide</Link>.</p>
   </ToolLayout>;

@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from 'react';
+import {useToolMeasurement} from './AnalyticsProvider';
 
 const numberFormatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
 
@@ -17,22 +18,24 @@ export default function WatchTimeCalculator(){
   const totalMinutes=safeViews*safeDuration*(unit==='seconds'?1/60:1);
   const totalHours=totalMinutes/60;
   const totalDays=totalHours/24;
+  const validMeasurement=[views,duration].every(value=>String(value).trim()!==''&&Number.isFinite(Number(value))&&Number(value)>=0)&&Number.isInteger(Number(views))&&Number.isFinite(totalMinutes);
+  const measureChange=useToolMeasurement('Watch Time Calculator',validMeasurement);
   const format=(value)=>Number.isFinite(value)?numberFormatter.format(value):'Too large to calculate';
 
   return <>
     <p id="watch-time-input-note" className="muted">Use views and average view duration from the same video or content set, platform, and reporting/date range. The view count must match the metric used to calculate that average.</p>
     <div className="field">
       <label htmlFor="watch-time-views">Total views</label>
-      <input id="watch-time-views" type="number" min="0" step="1" inputMode="numeric" aria-describedby="watch-time-input-note" value={views} onChange={event=>setViews(event.target.value)}/>
+      <input id="watch-time-views" type="number" min="0" step="1" inputMode="numeric" aria-describedby="watch-time-input-note" value={views} onChange={event=>{setViews(event.target.value);measureChange(event);}}/>
     </div>
     <div className="duration-fields">
       <div className="field">
         <label htmlFor="average-view-duration">Average view duration</label>
-        <input id="average-view-duration" type="number" min="0" step="0.1" inputMode="decimal" aria-describedby="watch-time-input-note" value={duration} onChange={event=>setDuration(event.target.value)}/>
+        <input id="average-view-duration" type="number" min="0" step="0.1" inputMode="decimal" aria-describedby="watch-time-input-note" value={duration} onChange={event=>{setDuration(event.target.value);measureChange(event);}}/>
       </div>
       <div className="field">
         <label htmlFor="duration-unit">Duration unit</label>
-        <select id="duration-unit" value={unit} onChange={event=>setUnit(event.target.value)}>
+        <select id="duration-unit" value={unit} onChange={event=>{setUnit(event.target.value);measureChange(event);}}>
           <option value="seconds">Seconds</option>
           <option value="minutes">Minutes</option>
         </select>

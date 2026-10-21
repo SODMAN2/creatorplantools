@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from 'react';
+import {useToolMeasurement} from './AnalyticsProvider';
 
 const numberFormatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
 const percentageFormatter=new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -14,21 +15,23 @@ export default function EngagementRateCalculator(){
   const denominator=safe(method);
   const rate=denominator>0?(total/denominator)*100:null;
   const basis=method==='views'?'views':'followers';
+  const validMeasurement=['likes','comments','shares','saves',method].every(field=>String(values[field]).trim()!==''&&Number.isSafeInteger(Number(values[field]))&&Number(values[field])>=0)&&rate!==null&&Number.isFinite(rate);
+  const measureChange=useToolMeasurement('Engagement Rate Calculator',validMeasurement);
 
   return <>
     <fieldset className="calculation-method">
       <legend>Calculate engagement rate by</legend>
       <div className="method-options">
-        <label className={method==='views'?'selected':''}><input type="radio" name="engagement-method" value="views" checked={method==='views'} onChange={e=>setMethod(e.target.value)}/> Views</label>
-        <label className={method==='followers'?'selected':''}><input type="radio" name="engagement-method" value="followers" checked={method==='followers'} onChange={e=>setMethod(e.target.value)}/> Followers</label>
+        <label className={method==='views'?'selected':''}><input type="radio" name="engagement-method" value="views" checked={method==='views'} onChange={e=>{setMethod(e.target.value);measureChange(e);}}/> Views</label>
+        <label className={method==='followers'?'selected':''}><input type="radio" name="engagement-method" value="followers" checked={method==='followers'} onChange={e=>{setMethod(e.target.value);measureChange(e);}}/> Followers</label>
       </div>
     </fieldset>
     <div className="engagement-inputs">
-      {['likes','comments','shares','saves'].map(field=><div className="field" key={field}><label htmlFor={`engagement-${field}`}>{field[0].toUpperCase()+field.slice(1)}</label><input id={`engagement-${field}`} type="number" min="0" step="1" inputMode="numeric" value={values[field]} onChange={e=>update(field,e.target.value)}/></div>)}
+      {['likes','comments','shares','saves'].map(field=><div className="field" key={field}><label htmlFor={`engagement-${field}`}>{field[0].toUpperCase()+field.slice(1)}</label><input id={`engagement-${field}`} type="number" min="0" step="1" inputMode="numeric" value={values[field]} onChange={e=>{update(field,e.target.value);measureChange(e);}}/></div>)}
     </div>
     <div className="engagement-inputs denominator-inputs">
-      <div className="field"><label htmlFor="engagement-views">Views</label><input id="engagement-views" type="number" min="0" step="1" inputMode="numeric" value={values.views} onChange={e=>update('views',e.target.value)}/></div>
-      <div className="field"><label htmlFor="engagement-followers">Followers</label><input id="engagement-followers" type="number" min="0" step="1" inputMode="numeric" value={values.followers} onChange={e=>update('followers',e.target.value)}/></div>
+      <div className="field"><label htmlFor="engagement-views">Views</label><input id="engagement-views" type="number" min="0" step="1" inputMode="numeric" value={values.views} onChange={e=>{update('views',e.target.value);measureChange(e);}}/></div>
+      <div className="field"><label htmlFor="engagement-followers">Followers</label><input id="engagement-followers" type="number" min="0" step="1" inputMode="numeric" value={values.followers} onChange={e=>{update('followers',e.target.value);measureChange(e);}}/></div>
     </div>
     <div className="engagement-result" aria-live="polite">
       <span>Engagement rate by {basis}</span>

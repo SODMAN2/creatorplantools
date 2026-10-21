@@ -32,7 +32,7 @@ export default function Page() {
   >
     <p className="muted"><time dateTime="2026-09-20">Last updated: September 20, 2026</time></p>
     <h2>Official description maximum: 5,000 characters</h2>
-    <p><a className="content-link" href="https://support.google.com/youtube/answer/12948449?hl=en" target="_blank" rel="noopener noreferrer">YouTube’s description guidance</a> states that descriptions allow a maximum of 5,000 characters (checked September 20, 2026). The total covers the full description, including your summary, timestamps, resource URLs and credits.</p>
+    <p><a data-analytics-resource className="content-link" href="https://support.google.com/youtube/answer/12948449?hl=en" target="_blank" rel="noopener noreferrer">YouTube’s description guidance</a> states that descriptions allow a maximum of 5,000 characters (checked September 20, 2026). The total covers the full description, including your summary, timestamps, resource URLs and credits.</p>
     <p>The first-150-character panel is a writing aid. It is not an official search snippet length or a promise about where YouTube will truncate your text. Check the actual video page and its mobile display.</p>
     <h2>Within-limit and over-limit examples</h2>
     <div className="description-structure">

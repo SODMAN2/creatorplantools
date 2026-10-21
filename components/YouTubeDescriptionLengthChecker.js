@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useToolMeasurement } from './AnalyticsProvider';
 
 const DESCRIPTION_LIMIT = 5000;
 
@@ -11,6 +12,7 @@ export default function YouTubeDescriptionLengthChecker() {
   const lineCount = description ? description.split(/\r\n|\r|\n/).length : 0;
   const preview = description.slice(0, 150);
   const remaining = DESCRIPTION_LIMIT - characterCount;
+  const measureChange = useToolMeasurement('YouTube Description Length Checker', description.trim() !== '' && remaining >= 0);
   const status = characterCount === 0
     ? { label: 'Add a description to check', className: 'title-status-short' }
     : remaining < 0
@@ -20,7 +22,7 @@ export default function YouTubeDescriptionLengthChecker() {
   return <>
     <div className="field">
       <label htmlFor="youtube-description">Video description</label>
-      <textarea id="youtube-description" className="description-input" rows="12" placeholder="Paste or write your YouTube video description here..." value={description} onChange={(event) => setDescription(event.target.value)} aria-describedby="description-limit-note" aria-invalid={remaining < 0} />
+      <textarea id="youtube-description" className="description-input" rows="12" placeholder="Paste or write your YouTube video description here..." value={description} onChange={(event) => { setDescription(event.target.value); measureChange(event); }} aria-describedby="description-limit-note" aria-invalid={remaining < 0} />
       <p className="tool-note" id="description-limit-note">YouTube’s description maximum is 5,000 characters. Include all text, spaces, line breaks, links and timestamps.</p>
     </div>
     <div className="description-counts" aria-label="Description counts">

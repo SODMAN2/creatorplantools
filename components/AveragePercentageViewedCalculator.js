@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useToolMeasurement } from './AnalyticsProvider';
 import { calculateAveragePercentageViewed, describeDuration, formatPercentage } from '@/lib/averagePercentageViewed.mjs';
 
 export default function AveragePercentageViewedCalculator() {
@@ -8,6 +9,7 @@ export default function AveragePercentageViewedCalculator() {
   const [averageViewDuration, setAverageViewDuration] = useState('5:00');
   const [touched, setTouched] = useState({});
   const result = calculateAveragePercentageViewed(videoLength, averageViewDuration);
+  const measureChange = useToolMeasurement('Average Percentage Viewed Calculator', result.percentage !== null);
   const fields = [
     { key: 'videoLength', id: 'apv-video-length', label: 'Video length', value: videoLength, setValue: setVideoLength, hint: 'The full runtime of this one video. For example, 10:00 means 10 minutes.' },
     { key: 'averageViewDuration', id: 'apv-average-duration', label: 'Average view duration', value: averageViewDuration, setValue: setAverageViewDuration, hint: 'The average time watched for the same video and reporting period. For example, 5:00 means 5 minutes.' },
@@ -19,7 +21,7 @@ export default function AveragePercentageViewedCalculator() {
       const error = touched[key] ? result.errors[key] : null;
       return <div className="field" key={key}>
         <label htmlFor={id}>{label}</label>
-        <input id={id} type="text" value={value} maxLength={24} spellCheck={false} autoComplete="off" aria-invalid={Boolean(error)} aria-describedby={`apv-format ${id}-hint${error ? ` ${id}-error` : ''}`} onChange={(event) => setValue(event.target.value)} onBlur={() => setTouched((current) => ({ ...current, [key]: true }))} />
+        <input id={id} type="text" value={value} maxLength={24} spellCheck={false} autoComplete="off" aria-invalid={Boolean(error)} aria-describedby={`apv-format ${id}-hint${error ? ` ${id}-error` : ''}`} onChange={(event) => { setValue(event.target.value); measureChange(event); }} onBlur={() => setTouched((current) => ({ ...current, [key]: true }))} />
         <p id={`${id}-hint`} className="apv-hint">{hint}</p>
         {error && <p id={`${id}-error`} className="apv-error" role="alert">{label}: {error}</p>}
       </div>;
